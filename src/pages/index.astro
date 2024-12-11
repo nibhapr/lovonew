@@ -1,0 +1,30 @@
+---
+import "../assets/css/icons.css";
+import "../assets/css/global.css";
+import "../assets/css/pages.css";
+import "../assets/css/custom.css";
+import "../pages/index.scss";
+import Layout from "../Components/layout/base-layout.astro";
+
+import DecorComponents from "../Components/DecorComponents";
+
+const structuredData = {
+	"@context": "http://schema.org",
+	"@type": "website",
+	name: "Digiimpact",
+	url: "https://digiimpact.tech/contact",
+	logo: { "@type": "ImageObject", url: "https://digiimpact.tech/logodigi.jpg" },
+	description: "Digital oscilloscope distributor and manufacturer in india",
+	sameAs: [
+		"https://www.facebook.com/digiimpact",
+		"https://twitter.com/digiimpact",
+	],
+};
+---
+
+<Layout
+	title="Digital oscilloscope distributor and manufacturer in india"
+	description=""
+>
+	<DecorComponents client:load />
+</Layout>
